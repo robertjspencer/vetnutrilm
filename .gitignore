@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+runs/
+.venv/
+.pytest_cache/
+# Never commit clinical data, predictions or adapters
+*.safetensors
+private/

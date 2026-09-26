@@ -1,0 +1,13 @@
+id,patient,text,label
+s01,p1,"Invented note. Vaccination today. Owner feeds a commercial dry kibble twice daily. BCS 5/9.",1
+s02,p1,"Invented note. Recheck ears. Owner reports eating well on the same dry kibble.",1
+s03,p2,"Invented note. Lameness left fore. No diet discussed. Rest and recheck in one week.",0
+s04,p3,"Invented note. Advised owner to consider a weight-management diet. No current diet recorded.",0
+s05,p4,"Invented note. Eats home-cooked chicken and rice most nights plus a tinned food in the morning.",1
+s06,p5,"Invented note. Nail trim only.",0
+s07,p6,"Invented note. Nail trim only.",0
+s08,p7,"Invented note. On a renal prescription dry food for kidney disease. Appetite good.",1
+s09,p8,"Invented note. Given dental chews daily. No other food information.",0
+s10,p9,"Invented note. Previously fed raw mince but owner stopped last month. No current diet stated.",0
+s11,p10,"Invented note. Puppy on a puppy wet food three times daily.",1
+s12,p11,"Invented note. EDDU normal. Heartworm injection given.",0

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vetnutrilm"
+version = "0.1.0"
+description = "Identify and categorise nutrition information in veterinary clinical notes with fine-tuned Gemma adapters"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scikit-learn>=1.4"]
+
+[project.optional-dependencies]
+# Versions used for the published results (UQ Bunya, NVIDIA H100, CUDA 12.6).
+gpu = ["torch==2.13.0", "transformers==5.17.0", "peft==0.21.0", "bitsandbytes==0.50.2", "accelerate==1.14.0"]
+test = ["pytest>=8"]
+
+[project.scripts]
+vetnutrilm = "vetnutrilm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vetnutrilm = ["published_results.json", "synthetic_notes.csv"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

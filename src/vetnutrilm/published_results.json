@@ -1,0 +1,72 @@
+{
+  "source": "VetNutriLM published internal cross-validation results (grouped bootstrap, 2,000 replicates, seed 42).",
+  "binary": {
+    "records": 1002,
+    "positives": 430,
+    "groups": 958,
+    "point": {
+      "f1": 0.9406392694063926,
+      "sensitivity": 0.958139534883721,
+      "precision": 0.9237668161434978,
+      "specificity": 0.9405594405594405,
+      "accuracy": 0.9481037924151696
+    },
+    "intervals": {
+      "f1": {
+        "lower": 0.9232462233026567,
+        "upper": 0.9565241572762007
+      },
+      "sensitivity": {
+        "lower": 0.9382416008522805,
+        "upper": 0.9756653277773004
+      },
+      "precision": {
+        "lower": 0.8989228772710419,
+        "upper": 0.9472478324427867
+      },
+      "specificity": {
+        "lower": 0.9197198746753514,
+        "upper": 0.959596886294134
+      },
+      "accuracy": {
+        "lower": 0.9331320625482302,
+        "upper": 0.961780057064148
+      }
+    },
+    "pretrained_f1": 0.9310734463276836,
+    "f1_difference": {
+      "lower": -0.0023878291851581967,
+      "upper": 0.021393310205819676
+    }
+  },
+  "category": {
+    "records": 512,
+    "groups": 461,
+    "categories": [
+      "Commercial dry",
+      "Commercial wet",
+      "Raw",
+      "Home-prepared cooked",
+      "Therapeutic / prescription",
+      "Other"
+    ],
+    "macro_f1": 0.9266775947360654,
+    "micro_f1": 0.9390243902439024,
+    "per_category_f1": [
+      0.9855072463768116,
+      0.9419354838709677,
+      0.9615384615384616,
+      0.9259259259259259,
+      0.84375,
+      0.9014084507042254
+    ],
+    "macro_f1_interval": {
+      "lower": 0.9019563223497068,
+      "upper": 0.9472416599544144
+    },
+    "micro_f1_interval": {
+      "lower": 0.923598963065067,
+      "upper": 0.953405017921147
+    }
+  }
+}
