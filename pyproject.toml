@@ -22,7 +22,7 @@ Repository = "https://github.com/robertjspencer/vetnutrilm"
 Issues = "https://github.com/robertjspencer/vetnutrilm/issues"
 
 [project.optional-dependencies]
-# Versions used for the published results (UQ Bunya, NVIDIA H100, CUDA 12.6).
+# Versions used for the manuscript runs (UQ Bunya, NVIDIA H100, CUDA 12.6).
 gpu = ["torch==2.13.0", "transformers==5.17.0", "peft==0.21.0", "bitsandbytes==0.50.2", "accelerate==1.14.0"]
 test = ["pytest>=8"]
 
