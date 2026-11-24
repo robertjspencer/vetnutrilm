@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+type: software
+message: "If you use this software, please cite it using the metadata below. Manuscript citation will be added upon publication."
+title: "VetNutriLM"
+abstract: "Open-source, data-free pipeline for identifying and categorising nutrition information in free-text veterinary clinical notes using two-stage QLoRA fine-tuned Gemma adapters."
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/robertjspencer/vetnutrilm"
+url: "https://robertjspencer.com/#proof-vetnutrilm"
+authors:
+  - family-names: "Spencer"
+    given-names: "Robert"
+    orcid: "https://orcid.org/0009-0005-2321-6212"
+    affiliation: "The University of Queensland"
+keywords:
+  - clinical-nlp
+  - veterinary-medicine
+  - electronic-health-records
+  - large-language-models
+  - qlora
+  - gemma
+  - one-health

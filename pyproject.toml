@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=69"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,8 +8,18 @@ version = "0.1.0"
 description = "Identify and categorise nutrition information in veterinary clinical notes with fine-tuned Gemma adapters"
 readme = "README.md"
 requires-python = ">=3.11"
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+  {name = "Robert Spencer"},
+]
+keywords = ["clinical-nlp", "veterinary", "ehr", "llm", "qlora", "gemma", "nutrition", "one-health"]
 dependencies = ["numpy>=1.26", "pandas>=2.1", "scikit-learn>=1.4"]
+
+[project.urls]
+Homepage = "https://robertjspencer.com/#proof-vetnutrilm"
+Repository = "https://github.com/robertjspencer/vetnutrilm"
+Issues = "https://github.com/robertjspencer/vetnutrilm/issues"
 
 [project.optional-dependencies]
 # Versions used for the published results (UQ Bunya, NVIDIA H100, CUDA 12.6).
