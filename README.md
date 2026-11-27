@@ -8,7 +8,7 @@ Status: Manuscript in preparation · Code: Apache-2.0 · Adapters: pending custo
 **What this is, in plain terms.** VetNutriLM extracts structured nutrition information from free-text veterinary consultation notes. It consists of two separately trained 4-bit NF4 QLoRA adapters (rank 8, alpha 16, 22.5M trainable parameters each, attention projections `q/k/v/o`, answer-token-only loss) for Google's `google/gemma-4-31B-it`:
 
 - **VetNutriLM-Binary** answers yes (`[1]`) or no (`[0]`): does the note record what the dog is currently fed, or was fed without stopping?
-- **VetNutriLM-FoodCategories** marks six overlapping food types as a 6-element JSON array: commercial dry, commercial wet, raw, home-prepared cooked, therapeutic or prescription, and other.
+- **VetNutriLM-FoodCategories** marks six overlapping food types as a 6-element JSON array: commercial dry, commercial wet, raw, home-prepared cooked, therapeutic, and other. *(The frozen prompt and CSV schema in `src/vetnutrilm/prompts.py` retain the original training label `Therapeutic / prescription` for reproducibility.)*
 
 This repository holds the code, prompts, and settings behind the manuscript results, a command-line tool to train or run either classifier, and a verification command that recomputes every reported figure. It contains **no clinical notes, labels, predictions, or adapter weights**.
 
@@ -54,13 +54,13 @@ Grouped five-fold cross-validation on Australian primary-care canine notes from 
 | Commercial wet | 94.2% |
 | Home-prepared cooked | 92.6% |
 | Other | 90.1% |
-| Therapeutic / prescription | 84.4% |
+| Therapeutic | 84.4% |
 
-Exact point estimates and bootstrap bounds are stored in [`src/vetnutrilm/published_results.json`](src/vetnutrilm/published_results.json).
+Exact point estimates and bootstrap bounds are stored in [`src/vetnutrilm/published_results.json`](src/vetnutrilm/published_results.json) (retaining the frozen schema label `Therapeutic / prescription`).
 
 </details>
 
-**Scope.** These are development results: the same folds informed the choice of Gemma. The 1,002 binary reference notes comprised 1,000 records from the nutrition-candidate extract (Dataset B) and two from the counterfactual extract (Dataset C). Performance in other clinics, referral hospitals, and countries is untested.
+**Scope.** These are internal cross-validation results on annotated samples drawn from a 5,000-record stratified candidate pool (Dataset B; 1,002 binary notes and 512 food-category notes) within a 38,535-consultation lexicon-matched VetCompass Australia extract (Dataset X, 2019–2024, 167 primary-care clinics). The same folds informed the choice of Gemma; performance in other clinics, referral hospitals, non-lexicon-matched notes, and other countries is untested.
 
 ## Install
 

@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 authors = [
-  {name = "Robert Spencer"},
+  {name = "Robert J. Spencer"},
 ]
 keywords = ["clinical-nlp", "veterinary", "ehr", "llm", "qlora", "gemma", "nutrition", "one-health"]
 dependencies = ["numpy>=1.26", "pandas>=2.1", "scikit-learn>=1.4"]
